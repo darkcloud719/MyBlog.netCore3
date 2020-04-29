@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200405105614_0656.cs" />
+    <Compile Remove="Migrations\20200405105614_0656.Designer.cs" />
+    <Compile Remove="Migrations\20200405105901_123.cs" />
+    <Compile Remove="Migrations\20200405105901_123.Designer.cs" />
+    <Compile Remove="Migrations\20200405110516_123.cs" />
+    <Compile Remove="Migrations\20200405110516_123.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="3.1.2" />
+    <PackageReference Include="PhotoSauce.MagicScaler" Version="0.10.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot/content/blog/*.*" CopyToPublishDirectory="Never" />
+    <Content Update="wwwroot/lib/**/*.*" CopyToPublishDirectory="Never" />
+    <Content Update="wwwroot/lib/**/dist/**/*.*" CopyToPublishDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\Trumbowyg-master\.github\FUNDING.yml" />
+    <None Include="wwwroot\lib\Trumbowyg-master\.github\ISSUE_TEMPLATE.md" />
+  </ItemGroup>
+
+</Project>
